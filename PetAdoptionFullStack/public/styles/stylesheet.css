@@ -1,0 +1,105 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Hide overflow on the root level */
+}
+
+main {
+    background: #eee;
+    flex: 1;
+    overflow-y: auto; /* Enable scrolling for main content if necessary */
+    padding: 10px;
+}
+
+.page-container {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+}
+
+header {
+    background: #ddd;
+    padding: 20px; 
+    text-align: center;
+}
+
+footer {
+    padding: 20px; /* Increased padding for a larger header and footer */
+    text-align: center;
+    background-color: green;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+
+.content-container {
+    flex: 1;
+    display: flex;
+    overflow-y: auto;
+    background-color: #ccc; /* Modified to change the background color */
+}
+
+nav {
+    background: #bbb;
+    padding: 10px;
+    width: 200px;
+    border-right: 2px solid black;
+}
+
+nav a {
+    display: block;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: green; /* Modify This Colour Way later */
+    color: black;
+}
+
+nav a:hover {
+    background-color: lightgreen;
+}
+
+
+
+/* for an p withing the Filling Out From tag */
+
+form.pForm {
+
+    text-align: left;
+
+  }
+
+  form.pForm p {
+
+    text-align: left;
+    padding-top: 10px;
+
+  }
+
+
+  /* For any li in ul with class name PrivacyPolicy */
+
+  ul.PrivacyPolicy li {
+    margin-bottom: 20px;
+  }
+
+
+  /* For Pets.html */
+
+  .PetsInfo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 35px;
+}

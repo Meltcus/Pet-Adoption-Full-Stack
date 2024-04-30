@@ -1,0 +1,124 @@
+
+        <main>
+
+
+            <h2 style="text-align: center; padding-right: 170px;">Fill Out The Following Form So We Can Match You With The Best Available Pet</h2>
+
+            
+            <div style="text-align: center; width: 500px; height: 715px; padding: 20px; border: 2px solid; margin: 0 auto 0 ;">
+            <h2>Adopt a Dog/Cat by Filling Out This Form!</h2>
+            <hr style="width: 500px; height: 2px; background-color: black;">
+
+            <form action="/submitFindDogCat" class="pForm" onsubmit="return checkForm()" method = "POST"> <!-- Ask Viresh abt action =""-->
+
+                    <!--Type of Pet-->
+
+                    <p>Type of Pet: <br><br>
+                    <input type="radio" id="Dog" name="Pets" value="Dog">
+                    <label for="Dog">Dog</label>
+
+                    <input type="radio" id="Cat" name="Pets" value="Cat">
+                    <label for="Cat">Cat</label>
+
+                    <input type="radio" id="None" name="Pets" value="Any">
+                    <label for="None">Any</label><br>
+                    
+                    </p> 
+
+                    
+                    <!--Age of Pet-->
+
+                    <p>Select Age of Pets</p>
+                    <div>
+                        <select name="age">
+                            <option>Any</option>
+                            <option>0 - 3 years old</option>
+                            <option>4 - 7 years old</option>
+                            <option>8 - 11 years old</option>
+                            <option>12+ years old</option>
+                        </select>
+                    </div>
+
+                    <!--Gender of Pet-->
+
+                    <p>Select Gender of Pet:</p>
+                    <input type="radio" id="Male" name="Gender" value="Male"> <!--Update .js for this-->
+                    <label for="Male">Male</label>
+
+                    <input type="radio" id="Female" name="Gender" value="Female"> <!--Update .js for this-->
+                    <label for="Female">Female</label>
+
+
+
+                     <!--Breeds of Dogs-->
+
+                    <br>
+                    <p>Select Breed of Dog:</p>
+                    <input type="radio" id="GoldenRetriever" name="Breed" value="Golden Retriever">
+                    <label for="GoldenRetriever">Golden Retriever</label>
+                
+                    <input type="radio" id="Labrador" name="Breed" value="Labrador">
+                    <label for="Labrador">Labrador</label>
+                
+                    <input type="radio" id="GermanShepherd" name="Breed" value="German Shepherd">
+                    <label for="GermanShepherd">German Shepherd</label> <br>
+                
+                    <input type="radio" id="Poodle" name="Breed" value="Poodle">
+                    <label for="Poodle">Poodle</label>
+                
+                    <input type="radio" id="Bulldog" name="Breed" value="Bulldog">
+                    <label for="Bulldog">Bulldog</label>
+                
+                    <input type="radio" id="Beagle" name="Breed" value="Beagle">
+                    <label for="Beagle">Beagle</label>
+
+
+                    <!--Breeds of Cats-->
+
+                    <br>
+                    <p>Select Breed of Cat:</p>
+                    <input type="radio" id="Siamese" name="Breed" value="Siamese">
+                    <label for="Siamese">Siamese</label>
+                
+                    <input type="radio" id="Persian" name="Breed" value="Persian">
+                    <label for="Persian">Persian</label>
+                
+                    <input type="radio" id="MaineCoon" name="Breed" value="Maine Coon">
+                    <label for="MaineCoon">Maine Coon</label><br>
+                
+                    <input type="radio" id="Sphynx" name="Breed" value="Sphynx">
+                    <label for="Sphynx">Sphynx</label>
+                
+                    <input type="radio" id="Bengal" name="Breed" value="Bengal">
+                    <label for="Bengal">Bengal</label>
+                
+                    <input type="radio" id="ScottishFold" name="Breed" value="Scottish Fold">
+                    <label for="ScottishFold">Scottish Fold</label>
+
+                
+                    <!--Pet Needs to Get Along-->
+
+                    <p>Pet needs to get along with the following:</p>
+                    <input type="checkbox" id="Dogs" name="dogF" value="GetAlongWith">
+                    <label for="Dogs"> Dogs</label>
+
+                    <input type="checkbox" id="Cats" name="catF" value="GetAlongWith">
+                    <label for="Cats"> Cats</label>
+
+                    <input type="checkbox" id="Kids" name="kidF" value="GetAlongWith">
+                    <label for="Kids"> Kids</label><br><br><br>
+
+                    <!--Submit and Clear button-->
+                    <div style="text-align: left">
+                        <input type="submit" value="Submit" style="margin-right: 10px;" onclick="checkForm()">
+                        <input type="reset" value="Clear">
+                      </div>
+            </form>
+
+            </div>
+
+
+
+        </main>
+
+

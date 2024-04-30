@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displaying Matching Pets</title>
+    <link rel="stylesheet" href="/styles/stylesheet.css">
+    <script src="/script/script.js"></script>
+</head>
+<body class="page-container">
+    <header>
+        <h1>Welcome to our Pet Adoption Center!</h1>
+        <% if (session.isAuthenticated) { %>
+            <a href="/logout"><button>Log Out</button></a>
+        <% } else { %>
+            <a href="/login-page"><button>Log In</button></a>
+        <% } %>
+    </header>
+    <main>
+        <h2>Matching Pet Records:</h2>
+        <ul>
+            <% filteredPets.forEach(function(pet) { %>
+                <li><%= pet.type %> - <%= pet.breed %>, <%= pet.age %>, <%= pet.gender %>, good with dogs: <%= pet.goodWithDogs %>, good with cats: <%= pet.goodWithCats %>, good with kids: <%= pet.goodWithKids %>, info: <%= pet.petInfo %>, owned by: <%= pet.ownerName %>, contact: <%= pet.email %></li>
+            <% }); %>
+        </ul>
+    </main>
+</body>
+</html>

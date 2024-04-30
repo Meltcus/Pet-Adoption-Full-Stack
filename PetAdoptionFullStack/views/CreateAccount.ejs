@@ -1,0 +1,44 @@
+<main>
+    <h2>Create Account</h2>
+    <form id="accountForm">
+        <div>
+            <label for="username">Username:  </label>
+            <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" required>
+        </div>
+        <br>
+        <div>
+            <label for="password">Password:   </label>
+            <input type="password" id="password" name="password" pattern="(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{4,}" required>
+        </div>
+        <br>
+        <button type="submit">Create Account</button>
+    </form>
+    <div id="message"></div>
+
+    <script>
+        document.getElementById('accountForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+    
+            // Perform additional validation here if needed
+    
+            try {
+                // Send the username and password to the server
+                const response = await fetch('/createAccount', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+                });
+    
+                const message = await response.text();
+                document.getElementById('message').innerText = message;
+            } catch (error) {
+                document.getElementById('message').innerText = 'An error occurred. Please try again.';
+            }
+        });
+    </script>
+    
+</main>
